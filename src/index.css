@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Smart Mirror Dark Theme */
+    --background: 220 25% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 5%;
+
+    --secondary: 220 25% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 25% 10%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 270 91% 65%;
+    --accent-foreground: 220 25% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 15%;
+    --input: 220 25% 12%;
+    --ring: 217 91% 60%;
+
+    --radius: 1rem;
+
+    /* Smart Mirror Specific Colors */
+    --mirror-glass: 220 25% 8%;
+    --mirror-frame: 220 25% 12%;
+    --mirror-glow: 217 91% 60%;
+    --mirror-accent: 270 91% 65%;
+    --mirror-surface: 220 25% 6%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(270, 91%, 65%));
+    --gradient-glass: linear-gradient(135deg, hsl(220, 25%, 8%, 0.8), hsl(220, 25%, 12%, 0.9));
+    --gradient-glow: radial-gradient(circle at center, hsl(217, 91%, 60%, 0.3), transparent);
+    
+    /* Shadows */
+    --shadow-mirror: 0 8px 32px hsl(220, 25%, 3%, 0.8);
+    --shadow-glow: 0 0 50px hsl(217, 91%, 60%, 0.3);
+    --shadow-accent: 0 0 30px hsl(270, 91%, 65%, 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 25% 5%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* Dark mode uses same values for consistency */
+    --background: 220 25% 5%;
+    --foreground: 210 40% 98%;
+    --card: 220 25% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 5%;
+    --secondary: 220 25% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 25% 10%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 270 91% 65%;
+    --accent-foreground: 220 25% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 25% 15%;
+    --input: 220 25% 12%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 25% 5%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
